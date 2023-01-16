@@ -1,0 +1,41 @@
+.balloon {
+    position: absolute;
+    border: 1px #666 solid;
+    width: 50px;
+    height: 50px;
+    box-shadow: -4px -4px 10px #FFF inset;
+    animation-name: lift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-radius: 50% 50% 30% 50%;
+}
+.balloon::after {
+    content: '';
+    position: absolute;
+    top: 41px;
+    left: 41px;
+    border: 5px solid transparent;
+    border-bottom: 8px solid #000;
+    width: 0;
+    transform: rotate(-45deg);
+    height: 0;
+}
+.scoreBoard {
+    position: absolute;
+    left: 600px;
+}
+@keyframes lift {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 1000px;
+    }
+}
+
+.canvas {
+    position: absolute;
+    height: 1000px;
+    width: 500px;
+
+}
